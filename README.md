@@ -7,6 +7,42 @@ A first major issue in the database as it is the listing of multiple items in th
 
 An example of the new tables is given here:
 
+```mermaid
+erDiagram
+
+    NETFLIX_TITLES ||--o{ TITLE_COUNTRY : has
+    NETFLIX_TITLES ||--o{ TITLE_DIRECTOR : has
+    NETFLIX_TITLES ||--o{ TITLE_CAST : has
+    NETFLIX_TITLES ||--o{ TITLE_GENRE : has
+
+    NETFLIX_TITLES {
+        string show_id PK
+        string title
+        string type
+        int release_year
+    }
+
+    TITLE_COUNTRY {
+        string show_id FK
+        string country
+    }
+
+    TITLE_DIRECTOR {
+        string show_id FK
+        string director
+    }
+
+    TITLE_CAST {
+        string show_id FK
+        string cast_member
+    }
+
+    TITLE_GENRE {
+        string show_id FK
+        string genre
+    }
+```
+
 ## Point 1 - Content production across countries
 
 ### Which countries produce more contents? 
