@@ -42,6 +42,7 @@ erDiagram
         string genre
     }
 ```
+It is worth to be noted that from a formal point of view the four new sub-tables are constituted by a compund primary key, incliuding both the show_id and the other reference variable.
 
 ## Point 1 - Content production across countries
 
